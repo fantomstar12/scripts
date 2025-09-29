@@ -17,7 +17,7 @@ end
 -- Gets currency.value
 function CurrencyManager.GetCurrency(player: Player, Currency: String)
 
-  return player.leaderstats.Currency.Value
+  return player.leaderstats:FindFirstChild(Currency).Value
 
 end 
 
