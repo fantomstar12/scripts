@@ -1,6 +1,0 @@
-local CameraManager = {}
-
-
-
-
-return CameraManager
