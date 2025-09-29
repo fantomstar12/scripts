@@ -1,7 +1,7 @@
 local CurrencyManager = {}
 
 -- increases
-function CurrencyManager.AddCurrency(player: Player, Amount ,Currency: String)
+function CurrencyManager.AddCurrency(player: Player, Amount, Currency: String)
 local leaderstats = player:FindFirstChild("leaderstats")
 local currency = leaderstats.Currency
 if not currency then return false end
@@ -33,4 +33,16 @@ if not currency then return false
 
 end
 
+function CurrencyManager.SubtractCurrency(player: Player, Amount, Currency: String)
+
+  local leaderstats = player:WaitForChild("leaderstats")
+  if not leaderstats then return false end
+
+  local currency = leaderstats:FindFirstChild(Currency)
+
+  if not currency then return false end
+
+  currency -= amount
+  return true
+end
 return CurrencyManager
