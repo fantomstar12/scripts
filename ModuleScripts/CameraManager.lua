@@ -1,1 +1,6 @@
-local hi = "hi"
+local CameraManager = {}
+
+
+
+
+return CameraManager
