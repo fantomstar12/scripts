@@ -19,4 +19,13 @@ local item = InventoryManager:SearchTool(ItemName)
       return true
 end 
 
+function InventoryManager.RemoveItem(player: PLayer, ItemName: string)
+
+if not player then return false end
+if not ItemName then return false end
+
+  player.Backpack:FindFirstChild(ItemName):destroy()
+
+end 
+
 return InventoryManager
